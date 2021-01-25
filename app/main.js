@@ -41,4 +41,25 @@ $(function(){
     });
     /*Smooth scrol*/
 
+    /*Menu nav toggle*/
+    $("#nav-toggle").on("click", function(event){
+        event.preventDefault();
+
+        $(this).toggleClass("active");
+        $("#nav").toggleClass("active");
+
+        const menuLinks = document.querySelectorAll('.nav__link');
+        const menu = document.querySelector('.nav');
+        const menuToggle = document.querySelector('.nav-toggle');
+        if (window.innerWidth <= 767) {
+            for (let i = 0; i < menuLinks.length; i++){
+                menuLinks[i].addEventListener('click', () => {
+                    menu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            }
+        }
+    });
+    /*Menu nav toggle*/
+
 });

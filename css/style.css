@@ -241,6 +241,7 @@ hr{
     font-size: 30px;
     font-weight: 700;
     color: #fff;
+    cursor: pointer;
 }
 
 
@@ -295,6 +296,9 @@ hr{
     border: 0;
     z-index: 1;
     width: 30px;
+}
+.nav-toggle:focus{
+    outline: 0;
 }
 .nav-toggle__item{
     display: block;
@@ -1304,6 +1308,9 @@ hr{
         left: 0;
         background-color: #eb8b8d;
     }
+    .nav.active{
+        display: block;
+    }
     .nav__link{
         display: block;
         margin: 0;
@@ -1322,7 +1329,7 @@ hr{
         width: 50%;
     }
     .section{
-        padding: 40px 0;
+        padding: 100px 0;
     }
     .section--devices{
         padding-bottom: 0;
