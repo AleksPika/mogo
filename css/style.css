@@ -175,7 +175,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
+    padding: 0 15px;
     margin: 0 auto;
 } 
 
@@ -203,6 +204,9 @@ hr{
     background-color: #e5e5e5;
     margin: 40px 0;
 }
+.page{
+    overflow: hidden;
+}
 
 /*header*/
 
@@ -225,6 +229,7 @@ hr{
     font-weight: 700;
     color: #fff;
 }
+
 
 /* nav */
 
@@ -269,12 +274,14 @@ hr{
     justify-content: center;
     width: 100%;
     height: 100vh;
+    min-height: 820px;
+    position: relative;
     background: url(../img/intro.jpg) center no-repeat;
     background-size: cover;
 }
 .intro__inner{
     width: 100%;
-    min-width: 880px;
+    max-width: 880px;
     margin: 0 auto;
     text-align: center;
 }
@@ -365,7 +372,7 @@ hr{
 }
 .section__header{
     width: 100%;
-    min-width: 950px;
+    max-width: 950px;
     margin: 0 auto 50px;
     text-align: center;
 }
@@ -400,8 +407,9 @@ hr{
 }
 /*card*/
 .card{
-    margin-top: 80px;
+    margin: 80px -15px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .card__inner{
@@ -409,7 +417,8 @@ hr{
     background-color: #95e1d3;
 }
 .card__item{
-    width: 380px;
+    width: 33.33333%;
+    padding: 0 15px;
 }
 .card__item:hover .card__img{
     transform: translate3d(-10px, -10px, 0);
@@ -426,6 +435,8 @@ hr{
 }
 .card__img img{
     display: block;
+    max-width: 100%;
+    height: auto;
     transition: opacity .1s linear;
 }
 .card__text{
@@ -471,6 +482,7 @@ hr{
 }
 .stat{
     display: flex;
+    flex-wrap: wrap;
 }
 .stat__item{
     flex: 1 1 0;
@@ -496,12 +508,16 @@ hr{
 /*services*/
 .services{
    display: flex;
+   flex-wrap: wrap;
 }
 .services__item{
-    flex: 1 1 0;
-    padding-left: 85px;
-    padding-right: 35px;
+    width: 33.33333%;
+    padding: 0 35px 40px 85px;
     position: relative;
+    margin-bottom: 40px;
+}
+.services__item--border{
+    border-bottom: 1px solid #e5e5e5;
 }
 .services__icon{
     position: absolute;
@@ -532,6 +548,8 @@ hr{
 }
 .devices__item{
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 .devices__item--iphone{
     position: absolute;
@@ -543,11 +561,18 @@ hr{
 /*we do*/
 .wedo{
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 .wedo__item{
-    flex: 1 1 0;
+    width: 50%;
+    padding: 0 15px;
 }
-
+.wedo__img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .accordion__item{
     margin-bottom: 10px;
     border: 1px solid #e5e5e5;
@@ -618,6 +643,7 @@ hr{
     padding-left: 205px;
 }
 .reviews__photo{
+    display: block;
     padding: 50px;
     border: 2px solid #95e1d3;
     position: absolute;
@@ -626,6 +652,7 @@ hr{
     z-index: 1;
 }
 .reviews__photo-2{
+    display: block;
     width: 167px;
     height: 167px;
     border-radius: 50%;
@@ -713,6 +740,15 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -15px;
+}
+.logos__item{
+    padding: 0 15px;
+}
+.logos__img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 /*works*/
 .works{
@@ -786,9 +822,6 @@ hr{
     border-radius: 50%;
     z-index: 1;
 }
-.clients__content{
-
-}
 .clients__name{
     margin-bottom: 5px;
     font-size: 14px;
@@ -813,12 +846,12 @@ hr{
     height: 3px;
     margin: 15px 0;
     background-color: #f38181;
-
 }
 
 /*blog*/
 .blog{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .blog__item{
@@ -926,8 +959,13 @@ hr{
 }
 .footer__inner{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -15px;
     padding-bottom: 65px;
+}
+.footer__col{
+    padding: 0 15px;
 }
 .footer__col--first{
     width: 40%;
@@ -1006,7 +1044,6 @@ hr{
     text-transform: uppercase;
     text-decoration: none;
 }
-
 .blogs__title:hover{
     text-decoration: underline;
 }
@@ -1023,11 +1060,13 @@ hr{
     justify-content: space-between;
 }
 .instagram__item{
-    width: 32.3333%;
+    width: 33%;
     border-bottom: 1px solid #fff;
 }
 .instagram__item img{
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 .footer-instagram__link a{
     font-family: 'Roboto';
@@ -1098,4 +1137,266 @@ hr{
 }
 .copyright span{
     color: #f38181;
+}
+
+@media (max-width: 1230px){
+    .intro__suptitle{
+        font-size: 52px;
+    }
+    .intro__title{
+        font-size: 120px;
+    } 
+    .reviews__text{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 990px){
+    .intro__suptitle{
+        font-size: 32px;
+    }
+    .intro__title{
+        font-size: 80px;
+    } 
+    .stat{
+        justify-content: center;
+    }
+    .stat__item{
+        flex: none;
+        width: 33.33333%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border: 0;
+    }
+    .stat__item:last-child{
+        border-right: 0;
+    }
+    .services__item{
+        width: 50%;
+        padding-bottom: 0;
+    }
+    .services__item--border{
+        border-bottom: 0;
+    }
+    .reviews__photo{
+        padding: 42px;
+    }
+    .reviews{
+        padding: 0 60px;
+    }
+    .reviews__photo-2{
+        width: 150px;
+        height: 150px;
+    }
+    .reviews__item{
+        padding-left: 175px;
+    }
+    .clients{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .clients__item{
+        width: 100%;
+        padding-right: 0;
+    }
+    .clients__item:last-child{
+        margin-bottom: 0;
+    }
+    .footer__col--first{
+        width: 100%;
+    }
+    .footer__col--second{
+        width: 50%;
+    }
+    .footer__col--third{
+        width: 50%;
+    }
+    .instagram{
+        justify-content: flex-start;
+    }
+    .instagram__item{
+        width: auto;
+        border-right: 1px solid #fff;
+    }
+}
+
+@media (max-width: 770px){
+    .nav{
+        display: none;
+    }
+    .intro{
+        min-height: 650px;
+    }
+    .slider__text{
+        display: none;
+    }
+    .slider__item.active:before{
+        width: 50%;
+    }
+    .section{
+        padding: 40px 0;
+    }
+    .section--devices{
+        padding-bottom: 0;
+    }
+    .card{
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .card__item{
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+    }
+    .card__item:last-child{
+        margin-bottom: 0;
+    }
+    .services{
+        justify-content: center;
+    }
+    .services__item{
+        width: 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+    .services__icon{
+        left: 0;
+    }
+    .wedo__img{
+        display: none;
+    }
+    .wedo__item{
+        width: 100%;
+    }
+    .reviews__photo{
+        position: static;
+        margin: 0 auto 20px;
+    }
+    .reviews__photo-2{
+        position: static;
+        margin: 0 auto 20px;
+    }
+    .reviews__item{
+        padding-left: 0;
+    }
+    .reviews__text{
+        font-size: 16px;
+    }
+    .reviews__author{
+        font-size: 20px;
+    }
+    .works{
+        flex-wrap: wrap;
+    }
+    .works__col{
+        flex: none;
+        width: 50%;
+    }
+    .blog{
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    .blog__item{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .blog__item:last-child{
+        margin-bottom: 0;
+    }
+    .footer__col--second{
+        width: 100%;
+    }
+    .footer__col--third{
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px){
+    
+    .intro__suptitle{
+        font-size: 22px;
+    }
+    .intro__title{
+        font-size: 40px;
+    } 
+    .section__header{
+        margin-bottom: 50px;
+    }
+    .section__suptitle{
+        font-size: 20px;
+    }
+    .section__title{
+        font-size: 24px;
+    }
+    .section__title:after{
+        margin: 20px auto;
+    }
+    .stat__item{
+        width: 100%;
+        border-bottom: 1px solid #b5eae0;
+    }
+    .stat__item:last-child{
+        border-bottom: 0;
+    }
+    .stat__count{
+        font-size: 52px;
+    }
+    .devices{
+        max-width: 320px;
+    }
+    .devices__item--iphone{
+        width: 160px;
+        bottom: -50px;
+        right: -80px;
+    }
+    .reviews{
+        padding: 0;
+    }
+    .reviews__btn{
+        top: 18%;
+    }
+    .logos{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logos__item{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .logos__img{
+        margin: 0 auto;
+    }
+    .works__col{
+        width: 100%;
+    }
+    .clients__photo{
+        position: static;
+    }
+    .clients__item{
+        padding-left: 0;
+        text-align: center;
+    }
+    .clients__text:before{
+        margin: 15px auto;
+    }
+    .subscribe{
+        flex-wrap: wrap;
+        max-width: none;
+    }
+    .subscribe__input{
+        width: 100%;
+        margin-bottom: 10px;
+        border-right: 1px solid #e7e7e7;
+    }
+    .subscribe__btn{
+        width: 100%;
+    }
+    .blogs__img{
+        width: 80px;
+        height: 50px;
+    }
+    .blogs__title{
+        font-size: 10px;
+    }
 }
