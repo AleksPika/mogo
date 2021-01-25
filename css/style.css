@@ -275,8 +275,12 @@ hr{
 .nav__link:hover{
     color: #fce38f;
 }
-.nav__link:hover:after{
+.nav__link:hover:after,
+.nav__link.active:after{
     opacity: 1;
+}
+.nav__link.active{
+    color: #fce38f;
 }
 .nav-toggle{
     position: absolute;
