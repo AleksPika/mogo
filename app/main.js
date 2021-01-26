@@ -78,7 +78,18 @@ $(function(){
         $(this).addClass("active").next().slideDown(300)
     }
     ));
-    
-     /*Collapse*/
+
+    /*Collapse*/
+
+    /*Slider*/
+    $("[data-slider]").slick({
+        infinite: true,
+        fade: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+
+
+    /*Slider*/
 
 });
