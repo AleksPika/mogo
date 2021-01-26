@@ -62,4 +62,23 @@ $(function(){
     });
     /*Menu nav toggle*/
 
+    /*Collapse*/
+
+    $(window).on("load", (function() {
+        $(".accordion__header").each((function() {
+            $(this).hasClass("active") && $(this).addClass("active").next().slideDown(300)
+        }
+        ))
+    }
+    )),
+    $(".accordion__header").click((function(e) {
+        e.preventDefault(),
+        $(".accordion__header").not($(this)).removeClass("active"),
+        $(".accordion__content").not($(this).next()).slideUp(300),
+        $(this).addClass("active").next().slideDown(300)
+    }
+    ));
+    
+     /*Collapse*/
+
 });

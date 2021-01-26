@@ -662,30 +662,31 @@ hr{
 .accordion__header{
     border-bottom-color: #e5e5e5;
 }
-.accordion__item.active 
-.accordion__header:after{
-    transform: translateY(-50%) rotate(-45deg);
-    margin-top: 5px;
-}
 .accordion__header{
     padding: 15px 20px 15px 65px;
     position: relative;
     border-bottom: 1px solid transparent;
     cursor: pointer;
 }
-.accordion__header:after{
-    content: "";
+.accordion__arrow {
     display: block;
-    width: 16px;
-    height: 16px;
-    border-top: 2px solid #ccc;
-    border-right: 2px solid #ccc;
+    width: 15px;
+    height: 15px;
+    border-left: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
+    background: none;
     position: absolute;
+    right: 19px;
     top: 50%;
-    right: 20px;
-    z-index: 1;
-    transform: translateY(-50%) rotate(135deg);
-}
+    height: 20px;
+    width: 20px;
+    transform: translateY(-50%) rotate(-135deg);
+    transition: transform 0.3s linear;
+  }
+  .accordion__header.active .accordion__arrow {
+    transform: translateY(0%) rotate(45deg);
+  }
+
 .accordion__icon{
     position: absolute;
     top: 50%;
@@ -706,7 +707,23 @@ hr{
     font-weight: 300;
     font-size: 15px;
     color: #999;
+    height: 195px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: auto;
 }
+.accordion__content::-webkit-scrollbar {
+    width: 5px;
+  }
+  .accordion__content::-webkit-scrollbar-track {
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px #f5f5f5;
+  }
+  .accordion__content::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px #95e1d3;
+  }
 
 /*reviews*/
 
@@ -1254,6 +1271,12 @@ hr{
     .services__item--border{
         border-bottom: 0;
     }
+    .wedo__img{
+        display: none;
+    }
+    .wedo__item{
+        width: 100%;
+    }
     .reviews__photo{
         padding: 42px;
     }
@@ -1357,12 +1380,6 @@ hr{
     }
     .services__icon{
         left: 0;
-    }
-    .wedo__img{
-        display: none;
-    }
-    .wedo__item{
-        width: 100%;
     }
     .reviews__photo{
         position: static;
