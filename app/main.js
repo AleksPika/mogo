@@ -1,10 +1,10 @@
 $(function(){
 
-    let header = $("#header"),
+     /*let header = $("#header"),
         introH = $("#intro").innerHeight(),
         scrollOffset = $(window).scrollTop();
 
-    /* header fixed */
+    header fixed
     checkScroll(scrollOffset);
 
     $(window).on("scroll", function() {
@@ -22,7 +22,7 @@ $(function(){
             header.removeClass("fixed");
         }
     }
-    /* header fixed */
+    header fixed */
 
     /*Smooth scrol*/
     $("[data-scroll]").on("click", function(event){
